@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Daisy's Dairy Order Form</title>
+	<style>
+	body
+	{
+		font-family: verdana, arial, helvetica, sans-serif;
+		font-size: 12px;
+  		box-sizing: border-box;
+	}
+	label
+	{
+		padding: 10px;	
+	}
+	.formFrame
+	{
+		width: 200px;
+		padding: 10px;
+	}
+	.firstColumn
+	{
+		float: left;
+		width: 50px;
+		padding: 10px;
+	}
+	.column
+	{
+		
+		width: 80px;
+		padding: 10px;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="formFrame">
+	<form method="POST" action="order.php">
+	<fieldset>
+		<legend>Customer Details</legend>
+		<label>First name:<br>
+			<input type="text" name="firstName">
+		</label><br>
+		<label>Last name:<br>
+			<input type="text" name="lastName">
+		</label><br>
+		<label>Email:<br>
+			<input type="text" name="email">
+		</label><br>
+		<label>Phone:<br>
+			<input type="text" name="phone">
+		</label><br>
+		<fieldset>
+			<legend>Address</legend>
+			<label>Street number<br>
+				<input type="text" name="streetNum">
+			</label>
+			<label>Street name<br>
+				<input type="text" name="streetName">
+			</label>
+			<label>Town or suburb<br>
+				<input type="text" name="suburb">
+			</label>
+			<label>Postcode<br>
+				<input type="text" name="postcode">
+			</label>
+		</fieldset>
+	</fieldset>
+	<fieldset>
+		<legend>Order Details</legend>
+		<label><div class="firstColumn">Milk:</div>
+			<div class="column">
+				<select name="milk">
+					<option value="1">1 litre</option>
+					<option value="2">2 litre</option>
+					<option value="3">3 litre</option>
+					<option value="4">4 litre</option>
+				</select>
+			</div>
+		</label>
+		<br>
+		<label><div class="firstColumn">Bread:</div>
+			<div class="column">
+				<select name="bread">
+					<option value="1">1 loaf</option>
+					<option value="2">2 loaves</option>
+					<option value="3">3 loaves</option>
+					<option value="4">4 loaves</option>
+				</select>
+			</div>
+		</label>
+		<br>
+		<label><div class="firstColumn">Butter:</div>
+			<div class="column">
+				<select name="butter">
+					<option value="250">250 g</option>
+					<option value="500">500 g</option>
+				</select>
+			</div>
+		</label>
+		<br>
+		<label><div class="firstColumn">Cheese:</div>
+			<div class="column">
+				<select name="cheese">
+					<option value="250">250 g</option>
+					<option value="500">500g</option>
+					<option value="1000">1 kg</option>
+				</select>
+			</div>
+		</label>
+		<br>
+		<label><div class="firstColumn">Eggs:</div>
+			<div class="column">
+				<select name="eggs">
+					<option value="6">Half a dozen</option>
+					<option value="12">A dozen</option>
+				</select>
+			</div>
+		</label>
+		<br>
+			<input type="submit" value="Submit Order">
+	</fieldset>
+	</form>
+	</div>
+</body>
+</html>
